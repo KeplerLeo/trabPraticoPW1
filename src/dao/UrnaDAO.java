@@ -62,7 +62,7 @@ public class UrnaDAO implements GenericDAO<Urna> {
 
     @Override
     public int update(Urna obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public int deleteBy(Urna u) {
@@ -138,12 +138,12 @@ public class UrnaDAO implements GenericDAO<Urna> {
 
     @Override
     public Urna findByID(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public int delete(Urna obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

@@ -2,10 +2,6 @@ package dao;
 
 import java.sql.*;
 
-/**
- *
- * @author silviacb
- */
 public class ConnectionFactory {
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {

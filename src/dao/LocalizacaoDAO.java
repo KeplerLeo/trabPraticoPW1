@@ -28,17 +28,13 @@ public class LocalizacaoDAO implements GenericDAO<Localizacao> {
             System.out.println("Classe não encontrada!");
         }
         return chavePrimaria;
-
     }
 
     @Override
     public List<Localizacao> listAll() {
         List<Localizacao> lista = new LinkedList<>();
-
         try (Connection connection = new ConnectionFactory().getConnection();
-                PreparedStatement stmt
-                = connection.prepareStatement(SQLs.LISTALL_LOCALIZACAO.getSql())) {
-
+                PreparedStatement stmt = connection.prepareStatement(SQLs.LISTALL_LOCALIZACAO.getSql())) {
             System.out.println("Conexão aberta!");
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
@@ -58,12 +54,12 @@ public class LocalizacaoDAO implements GenericDAO<Localizacao> {
 
     @Override
     public int update(Localizacao obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public int delete(Localizacao obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -73,16 +69,13 @@ public class LocalizacaoDAO implements GenericDAO<Localizacao> {
                 PreparedStatement stmt
                 = connection.prepareStatement(SQLs.FINDBYID_LOCALIZACAO.getSql())) {
             stmt.setInt(1, id);
-
             System.out.println("Conexão aberta!");
-
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String cidade = rs.getString("cidade");
                 String uf = rs.getString("uf");
                 p = new Localizacao(cidade, uf);
             }
-
         } catch (SQLException e) {
             System.out.println("Exceção SQL - findById");
         } catch (Exception e) {

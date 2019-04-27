@@ -16,7 +16,6 @@ public enum SQLs {
 
     SQLs(String sql) {
         this.sql = sql;
-
     }
 
     public String getSql() {
